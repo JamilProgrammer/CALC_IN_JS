@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <link rel="stylesheet" href="bootstrap-5.1.2-dist/css/bootstrap.min.css">
+    </head>
+    <style>
+        .cal{
+            width:25%;
+            height: auto;
+            background-color:whitesmoke;
+            border:5px solid whitesmoke;
+            border-radius: 3px;
+           margin-left: 35%; 
+           margin-top: 10%; 
+            
+        }
+        .hw{
+            height: 15%;
+            width: 100%;
+            background-color: whitesmoke;
+            color:black; 
+            border:2px solid white; 
+        }
+        .button{
+            width:23.8%;
+            height: 12%;
+            background-color:whitesmoke;
+            color:black;
+             border:2px solid white; 
+            border-color: white;
+            font-weight: bold;
+        }
+        
+        .button1{
+            width:23.8%;
+            height: 12%;
+            background-color:rgba(252, 85, 24, 0.973);
+            color:whitesmoke;
+            border:2px solid white; 
+            border-radius: 50%;
+            font-weight: bolder;
+        }
+        .button2{
+            width:23.8%;
+            height: 12%;
+            background-color:whitesmoke;
+            color:rgba(252, 85, 24, 0.973);
+            border:2px solid white; 
+            font-weight: bold;
+        }
+        
+    </style>
+    <body style="background-color:gainsboro;" >
+ 
+        <div class="cal">
+            <div  >
+                <input  class="hw" id="tt" type="text" placeholder="">
+            </div>
+            <button class="button" onclick="displays('7')">7</button>
+            <button class="button" onclick="displays('8')">8</button>
+            <button class="button" onclick="displays('9')">9</button>
+            <button class="button2"        onclick="div()">%</button>
+            <button class="button" onclick="displays('4')">4</button>
+            <button class="button" onclick="displays('5')">5</button>
+            <button class="button" onclick="displays('6')">6</button>
+            <button class="button2"        onclick="mul()">*</button>
+            <button class="button" onclick="displays('1')">1</button>
+            <button class="button" onclick="displays('2')">2</button>
+            <button class="button" onclick="displays('3')">3</button>
+            <button class="button2"        onclick="sub()">-</button>
+            <!-- <button class="button1"        onclick="eql()">=</button> -->
+            <button class="button"         onclick="clr()">c</button>
+            <button class="button" onclick="displays('0')">0</button>
+            <!-- <button class="button"         onclick="clr()">c</button> -->
+            <button class="button2"        onclick="add()">+</button>
+            <button class="button1"        onclick="eql()">=</button>
+        </div>
+
+                                        <!--script-->
+
+        <script>
+
+            document.getElementById("tt");
+            var x,y,z,w,m,d;
+
+         function displays(i)
+            {  
+                document.getElementById("tt").value += i;
+            } 
+            function add()
+            {
+                 x=document.getElementById('tt').value;     
+                 document.getElementById('tt').value =""
+            }
+            function sub()
+            {
+               w=document.getElementById('tt').value;
+                document.getElementById('tt').value =""
+               
+            }
+            function mul()
+            {
+                
+                m=document.getElementById('tt').value;
+                document.getElementById('tt').value =""
+               
+            }
+            function div()
+            {
+                
+                d=document.getElementById('tt').value;
+                document.getElementById('tt').value =""
+               
+            }
+            function eql()
+                {
+                    y = document.getElementById('tt').value;
+                     if(add=x)
+                     {
+                        z=(parseInt(x)+parseInt(y));
+                        tt.value=z
+                     }
+                     else if(sub=w) 
+                     {
+                        z=(parseInt(w)-parseInt(y));
+                        tt.value=z;
+                     }
+                     else if(mul=m) 
+                     {
+                        z=(parseInt(m)*parseInt(y));
+                        tt.value=z;
+                     }
+                     else if(div=d) 
+                     {
+                         z=(parseFloat(d)/parseFloat(y));
+                         tt.value=z;
+                     }
+                }
+            function clr()
+            {
+                document.getElementById('tt').value ="0"
+            }    
+            </script>     
+
+
+        <script src="bootstrap-5.1.2-dist/js/bootstrap.min.js"></script>  
+    </body>
+</html>
